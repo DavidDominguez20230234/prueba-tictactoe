@@ -1,0 +1,159 @@
+.modal-confirmation {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal-confirmation.show {
+  opacity: 1;
+}
+
+.modal-confirmation.hidden {
+  display: none;
+}
+
+.modal-confirmation-background {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.modal-confirmation-content {
+  position: relative;
+  width: min(50%, 600px);
+  max-height: 90vh;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  background: url("../assets/images/back-confirmation.png") center/cover
+    no-repeat;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal-confirmation-content.show {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.modal-confirmation-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+  z-index: 0;
+}
+
+.modal-confirmation-content > *:not(.modal-confirmation-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+.modal-confirmation-title {
+  padding-top: 25px;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+
+.modal-confirmation-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
+  z-index: 1;
+  flex-wrap: wrap; /* ✅ Permite que los botones bajen en pantallas pequeñas */
+}
+
+.btn-save,
+.btn-cancel,
+.btn-accept {
+  width: min(260px, 31%);
+  height: 55px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  font-size: clamp(14px, 2.6vw, 22px);
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background: #ef9519;
+  color: #fff;
+}
+
+.btn-accept {
+  background: #2ab4fd;
+  color: #fff;
+}
+
+.btn-save {
+  background: #9c27b0;
+  color: #fff;
+}
+
+/* ========================= */
+/* 📱 Responsividad */
+/* ========================= */
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .modal-confirmation-content {
+    width: 70%;
+    padding: 24px 20px;
+  }
+
+  .modal-confirmation-title {
+    font-size: 24px;
+  }
+
+  .btn-save,
+  .btn-cancel,
+  .btn-accept {
+    width: 45%;
+    font-size: 16px;
+  }
+}
+
+/* Móviles (≤768px) */
+@media (max-width: 768px) {
+  .modal-confirmation-content {
+    width: 60%;
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+
+  .modal-confirmation-title {
+    font-size: 20px;
+  }
+
+  .modal-confirmation-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-save,
+  .btn-cancel,
+  .btn-accept {
+    width: 70%;
+    font-size: 14px;
+    height: 50px;
+  }
+}
