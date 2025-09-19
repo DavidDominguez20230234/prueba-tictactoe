@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/screens/loading.css" />
+    <link rel="stylesheet" href="css/screens/menu.css" />
+    <link rel="stylesheet" href="css/screens/player-setup.css" />
+    <link rel="stylesheet" href="css/modal-confirnation.css" />
+  </head>
+  <body>
+    <!-- Pantalla de Loading -->
+    <div id="loading-screen" class="loading-screen">
+      <h1 class="loading-text">LOADING</h1>
+      <div class="progress-container">
+        <div class="progress-border">
+          <div class="progress-bar"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Pantalla de Menú -->
+    <div id="menu-screen" class="menu-screen hidden">
+      <div class="menu-container">
+        <h1 class="menu-title">Tic Tac Toe</h1>
+        <button class="menu-btn btn-cpu">JUGADOR VS CPU</button>
+        <button class="menu-btn btn-pvp">JUGADOR VS JUGADOR</button>
+      </div>
+    </div>
+    <!-- Pantalla de Configuración para 2 Jugadores -->
+    <div id="player-setup-pvp" class="player-setup-screen hidden">
+      <div class="player-setup-container">
+        <h1 class="setup-title">NOMBRAR JUGADORES</h1>
+        <input class="input" type="text" id="player1" placeholder="Jugador 1" />
+        <input class="input" type="text" id="player2" placeholder="Jugador 2" />
+        <button class="setup-btn btn-start" id="start-pvp">INICIAR</button>
+        <button class="setup-btn btn-back">VOLVER</button>
+      </div>
+    </div>
+
+    <!-- Pantalla de Configuración para Jugador vs CPU -->
+    <div id="player-setup-cpu" class="player-setup-screen hidden">
+      <div class="player-setup-container">
+        <h1 class="setup-title">NOMBRAR JUGADOR</h1>
+        <input class="input" type="text" id="player" placeholder="Tu nombre" />
+        <select id="cpu-difficulty" class="input">
+          <option value="easy">Fácil</option>
+          <option value="medium" selected>Medio</option>
+          <option value="hard">Difícil</option>
+        </select>
+        <button class="setup-btn btn-start" id="start-cpu">INICIAR</button>
+        <button class="setup-btn btn-back">VOLVER</button>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script type="module">
+      import { loadModal } from "./js/utils/modal.js";
+      loadModal();
+    </script>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
