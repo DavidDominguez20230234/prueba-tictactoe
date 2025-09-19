@@ -12,39 +12,6 @@ Tic Tac Toe es un juego clásico de tres en raya implementado como aplicación w
 - LocalStorage para guardar configuración y estado del juego
 - Imágenes y sonidos para mejorar la experiencia de usuario
 
-## Estructura del Proyecto
-
-tictactoe/
-├─ index.html # Pantalla principal y menú
-├─ game.html # Pantalla del juego
-├─ css/
-│ ├─ base.css # Estilos generales
-│ ├─ screens/ # Estilos por pantalla
-│ │ ├─ loading.css
-│ │ ├─ menu.css
-│ │ ├─ player-setup.css
-│ │ └─ game.css
-│ ├─ modal-confirmation.css
-│ └─ modal.css
-├─ js/
-│ ├─ app.js # Script principal
-│ ├─ screens/
-│ │ ├─ game.js # Lógica de la pantalla de juego
-│ │ ├─ loading.js # Lógica de la pantalla de juego
-│ │ └─ menu.js # Lógica del menú
-│ ├─ utils/
-│ │ ├─ modal.js # Funciones de modal
-│ │ └─ sounds.js # Funciones de sonidos
-│ ├─ app.js
-│ ├─ cpu.js # Lógica de movimientos de la CPU
-│ ├─ storage.js # Gestión de LocalStorage
-│ └─ gameLogic.js # Lógica de juego y reglas
-├─ assets/
-│ ├─ images/
-│ └─ icons/
-└─ partials/
-└─ modal.html # HTML del modal de confirmación
-
 ## Funcionalidades
 
 - Menú con opciones: Jugador vs Jugador y Jugador vs CPU.
