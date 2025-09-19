@@ -27,7 +27,8 @@ Tic Tac Toe es un juego clásico de tres en raya implementado como aplicación w
 
 ## Cómo Ejecutar
 
-1. Clonar o descargar el proyecto.
+1. Clonar o descargar el proyecto. También puede acceder al deploy del sitio mendiante
+   el siguiente link: https://prueba-tictactoe.vercel.app/index.html
 2. Abrir `index.html` en un navegador web moderno.
 3. Interactuar con el menú para iniciar una partida.
 4. Jugar seleccionando casillas del tablero.
